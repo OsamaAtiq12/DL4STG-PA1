@@ -1,0 +1,18 @@
+﻿# Python
+.venv/
+**/__pycache__/
+*.pyc
+.ipynb_checkpoints/
+__MACOSX/
+.DS_Store
+
+# Large / generated
+Question 1/checkpoints/
+Question 1/.venv/
+*.pt
+
+# Local extracts / temp
+_pdf_extract.txt
+_nb_extract.txt
+Question 1/smoke_outputs.txt
+Question 1/full_outputs.txt

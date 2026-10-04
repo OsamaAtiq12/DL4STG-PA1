@@ -1,0 +1,3 @@
+population,model,validation MSE,validation RMSE (m/s²),test MSE,test RMSE (m/s²)
+established,Period-routed ridge,0.2978665028065478,0.5457714748926952,0.41298326264461704,0.6426377382667603
+held-out,Period-routed ridge,0.3822789082803826,0.6182870759448095,0.5673768607201449,0.7532442238212949
