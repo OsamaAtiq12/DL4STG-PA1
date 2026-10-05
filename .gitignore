@@ -16,3 +16,14 @@ _pdf_extract.txt
 _nb_extract.txt
 Question 1/smoke_outputs.txt
 Question 1/full_outputs.txt
+
+# Local Overleaf packaging only
+Report_for_overleaf/
+Report_for_overleaf.zip
+
+# LaTeX build junk (keep main.pdf + main.tex + figures)
+Report/*.aux
+Report/*.log
+Report/*.out
+Report/*.toc
+Report/*.synctex.gz
