@@ -20,7 +20,7 @@
 
 \section{Task 1 -- Forecasting Across Heterogeneous Sensors}
 
-From a context of $L{=}96$ samples we forecast $H{=}48$ vibration readings (20\,Hz). Stations~1--3 are established; Station~4 is held out. Products A/B/C run at different paces.
+From a context of $L{=}96$ samples we forecast $H{=}48$ vibration readings (20\,Hz). Stations~1--3 are established; Station~4 is held out. Products A/B/C run at different paces. All Task~1 numbers and figures below come from one fresh \texttt{PA1\_PRESET=full} notebook run (data seed~0, model seed~0).
 
 \subsection{Response 1A -- Ordering of forecasters}
 \textbf{Before Output 1.1} I expected
@@ -106,7 +106,7 @@ Delay mixing is the wrong bias for an aperiodic transient or a period that drift
 \subsection{Response 4 -- Compare and deploy}
 \textbf{(a) Before Output 4.1.} When the slow component is strong, I expected decomposition to help most: the trend head takes the ramp and the mixer sees a cleaner residual.
 
-\textbf{(b) Output 4.1--4.2.} Among neural configs, Autoformer-inspired is best on established stations (RMSE $1.832$), then Raw Attention ($1.884$), Raw delay mixer ($1.985$), Attention$+$decomposition ($2.081$). On Station~4, Raw Attention is slightly best among neural models ($1.995$). Combining both switches is not uniformly better than Attention alone. Horizon error grows with lead time (Output~4.2). Period-routed ridge is still far stronger and cheaper (Output~1.1: $0.166$ / $0.173$).
+\textbf{(b) Output 4.1--4.2.} Among neural configs, Autoformer-inspired is best on established stations (RMSE $0.197$) and on Station~4 ($0.245$), then Raw delay mixer ($0.240$ / $0.363$), Attention$+$decomposition ($0.296$ / $0.430$), and Raw Attention ($0.431$ / $0.612$). Adding delay structure helps more than Attention alone; combining both switches is strongest among the neural models. Horizon error still grows with lead time (Output~4.2). Period-routed ridge remains best overall and cheapest (Output~1.1: $0.166$ / $0.173$).
 
 \begin{figure}[H]
 \centering
@@ -133,7 +133,7 @@ Held-out Station 4 & Period-routed ridge & Best held-out RMSE \\
 \end{tabular}
 \end{center}
 
-Output~4.3 test RMSE: established $0.643$; held-out $0.753$.
+Output~4.3 test RMSE: established $0.161$; held-out $0.183$.
 
 \section{Task 2 -- Leaderboard Challenge}
 
